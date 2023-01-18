@@ -7,6 +7,7 @@ This extension provides two functionalities that will help with your everyday tr
 
 
 Installation guide can be found in:
-NitroHelper installation guide.pdf
+NitroHelper_installation_guide.pdf
+
 Thanks to Atanas K. & Vasil D. 
 
