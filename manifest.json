@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "options_page": "/popup.html",
+    "permissions": ["tabs", "activeTab"],
+    "name": "NitroHelper",
+    "description": "Fast Nonitro checker & PSI Test executor",
+    "version": "1.0",
+    "icons": {
+        "16": "/icons/nitro-16.png",
+        "48": "/icons/nitro-48.png",
+        "128": "/icons/nitro-128.png"
+    },
+    
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "css": ["main.css"]
+    }],
+    "browser_action": {
+        "default_icon": "/icons/nitro-16.png",
+        "default_popup": "/popup.html",
+        "default_title": "A popup"
+    }
+}
