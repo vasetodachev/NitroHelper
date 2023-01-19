@@ -11,7 +11,6 @@ window.addEventListener('DOMContentLoaded', function() {
                        }
                         )
     });
-    
 
     var runpsi = document.getElementById('runpsi');
     // onClick's logic below:
@@ -24,8 +23,16 @@ window.addEventListener('DOMContentLoaded', function() {
                        }
                         )
     });
-    
+
+    var demotest = document.getElementById('demotest');
+    // onClick's logic below:
+    demotest.addEventListener('click', function() {
+        chrome.tabs.query(
+            {active:true, currentWindow: true},
+            tabs=>{
+                       const tab=tabs[0];
+                       chrome.tabs.create({url: "https://nitropack.io/demo#" + tab.url});
+                       }
+                        )
+    });
 });
-
-
-
