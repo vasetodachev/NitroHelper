@@ -82,4 +82,8 @@
   .tooltip:hover .tooltiptext {
     visibility: visible;
   }
+  .np-image-extension{
+    width: 65px;
+    height: 65px;
+  }
  

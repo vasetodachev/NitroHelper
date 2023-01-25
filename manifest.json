@@ -3,8 +3,8 @@
     "options_page": "/popup.html",
     "permissions": ["tabs", "activeTab"],
     "name": "NitroHelper",
-    "description": "Fast Nonitro checker & PSI Test executor",
-    "version": "1.0",
+    "description": "NitroHelper provides bunch of tools that will make the support life easier",
+    "version": "1.1",
     "icons": {
         "16": "/icons/icon.png",
         "48": "/icons/icon.png",

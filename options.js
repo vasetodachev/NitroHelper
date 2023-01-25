@@ -1,7 +1,7 @@
 window.addEventListener('DOMContentLoaded', function() {
-    // your button here
+    // Buttons listed below
     var nonitro = document.getElementById('nonitro');
-    // onClick's logic below:
+    // onClick's logic for Nonitro:
     nonitro.addEventListener('click', function() {
         chrome.tabs.query(
             {active:true, currentWindow: true},
@@ -13,7 +13,7 @@ window.addEventListener('DOMContentLoaded', function() {
     });
 
     var runpsi = document.getElementById('runpsi');
-    // onClick's logic below:
+    // onClick's logic PSI test:
     runpsi.addEventListener('click', function() {
         chrome.tabs.query(
             {active:true, currentWindow: true},
@@ -25,7 +25,7 @@ window.addEventListener('DOMContentLoaded', function() {
     });
 
     var demotest = document.getElementById('demotest');
-    // onClick's logic below:
+    // onClick's logic for NitroPack demo test:
     demotest.addEventListener('click', function() {
         chrome.tabs.query(
             {active:true, currentWindow: true},
@@ -35,4 +35,30 @@ window.addEventListener('DOMContentLoaded', function() {
                        }
                         )
     });
+
+    var mobiletest = document.getElementById('mobiletest');
+    // onClick's logic for Mobile-Friendly Test by Google:
+    mobiletest.addEventListener('click', function() {
+        chrome.tabs.query(
+            {active:true, currentWindow: true},
+            tabs=>{
+                       const tab=tabs[0];
+                       chrome.tabs.create({url: "https://search.google.com/test/mobile-friendly?url=" + tab.url});
+                       }
+                        )
+    });
+
+     var demotest = document.getElementById('testconfig');
+     var randomNum = Math.floor(Math.random()*10);
+     let r = (Math.random() + 1).toString(36).substring(7);
+    // onClick's logic for test optimization with random parametr:
+    demotest.addEventListener('click', function() {
+        chrome.tabs.query(
+            {active:true, currentWindow: true},
+            tabs=>{
+                       const tab=tabs[0];
+                       chrome.tabs.create({url: tab.url + "?test=" + r});
+                       }
+                        )
+    }); 
 });
