@@ -49,7 +49,6 @@ window.addEventListener('DOMContentLoaded', function() {
     });
 
      var demotest = document.getElementById('testconfig');
-     var randomNum = Math.floor(Math.random()*10);
      let r = (Math.random() + 1).toString(36).substring(7);
     // onClick's logic for test optimization with random parametr:
     demotest.addEventListener('click', function() {
@@ -61,4 +60,15 @@ window.addEventListener('DOMContentLoaded', function() {
                        }
                         )
     }); 
+    var richresultstest = document.getElementById('richresultstest');
+    // onClick's logic for Mobile-Friendly Test by Google:
+    richresultstest.addEventListener('click', function() {
+        chrome.tabs.query(
+            {active:true, currentWindow: true},
+            tabs=>{
+                       const tab=tabs[0];
+                       chrome.tabs.create({url: "https://search.google.com/test/rich-results?url=" + tab.url});
+                       }
+                        )
+    });
 });
