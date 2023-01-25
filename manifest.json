@@ -1,23 +1,32 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "options_page": "/popup.html",
-    "permissions": ["tabs", "activeTab"],
+    "permissions": [
+      "tabs",
+      "activeTab"
+    ],
     "name": "NitroHelper",
     "description": "NitroHelper provides bunch of tools that will make the support life easier",
     "version": "1.1",
     "icons": {
-        "16": "/icons/icon.png",
-        "48": "/icons/icon.png",
-        "128": "/icons/icon.png"
+      "16": "/icons/icon.png",
+      "48": "/icons/icon.png",
+      "128": "/icons/icon.png"
     },
-    
-    "content_scripts": [{
-        "matches": ["<all_urls>"],
-        "css": ["main.css"]
-    }],
-    "browser_action": {
-        "default_icon": "/icons/icon.png",
-        "default_popup": "/popup.html",
-        "default_title": "NitroHelper"
-    }
+    "content_scripts": [
+      {
+        "matches": [
+          "<all_urls>"
+        ],
+        "css": [
+          "main.css"
+        ]
+      }
+    ],
+    "action": {
+      "default_icon": "/icons/icon.png",
+      "default_popup": "/popup.html",
+      "default_title": "NitroHelper"
+    },
+    "content_security_policy": {}
 }
