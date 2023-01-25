@@ -57,7 +57,7 @@ window.addEventListener('DOMContentLoaded', function() {
             {active:true, currentWindow: true},
             tabs=>{
                        const tab=tabs[0];
-                       chrome.tabs.create({url: tab.url + "?test=" + r});
+                       chrome.tabs.create({url: tab.url + "?testnitro=" + r});
                        }
                         )
     }); 
