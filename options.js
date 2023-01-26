@@ -1,13 +1,16 @@
 window.addEventListener('DOMContentLoaded', function() {
     // Buttons listed below
     var nonitro = document.getElementById('nonitro');
+    
+
     // onClick's logic for Nonitro:
     nonitro.addEventListener('click', function() {
         chrome.tabs.query(
             {active:true, currentWindow: true},
-            tabs=>{
+            tabs=>{                         
                        const tab=tabs[0];
-                       chrome.tabs.create({url: tab.url + "?nonitro"});
+                       let test = document.getElementsByName('generator')[0].getAttribute('content')
+                       chrome.tabs.create({url: tab.url + "?" + test});
                        }
                         )
     });
@@ -56,7 +59,10 @@ window.addEventListener('DOMContentLoaded', function() {
             {active:true, currentWindow: true},
             tabs=>{
                        const tab=tabs[0];
-                       chrome.tabs.create({url: tab.url + "?testnitro=" + r});
+                       let destUrl = new URL(tab.url);
+                        destUrl.searchParams.set("testnitro", r);
+                        chrome.tabs.create({url: destUrl.href});
+                       //chrome.tabs.create({url: tab.url + "?testnitro=" + r});
                        }
                         )
     }); 
