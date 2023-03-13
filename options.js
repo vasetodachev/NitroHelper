@@ -1,8 +1,6 @@
 window.addEventListener('DOMContentLoaded', function() {
     // Buttons listed below
     var nonitro = document.getElementById('nonitro');
-    
-
     // onClick's logic for Nonitro:
     nonitro.addEventListener('click', function() {
         chrome.tabs.query(
@@ -10,7 +8,7 @@ window.addEventListener('DOMContentLoaded', function() {
             tabs=>{                         
                        const tab=tabs[0];
                        let test = document.getElementsByName('generator')[0].getAttribute('content')
-                       chrome.tabs.create({url: tab.url + "?" + test});
+                       chrome.tabs.create({url: tab.url + "?nonitro"});
                        }
                         )
     });
