@@ -75,4 +75,15 @@ window.addEventListener('DOMContentLoaded', function() {
                        }
                         )
     });
+    var viewsource = document.getElementById('viewsource');
+    // onClick's logic for Mobile-Friendly Test by Google:
+    viewsource.addEventListener('click', function() {
+        chrome.tabs.query(
+            {active:true, currentWindow: true},
+            tabs=>{
+                       const tab=tabs[0];
+                       chrome.tabs.create({url: "view-source:" + tab.url});
+                       }
+                        )
+    });
 });
