@@ -1,89 +1,85 @@
+/* Font Face */
 @font-face {
-    font-family: 'Styrene A Web';
-    src: local('Styrene A Web Regular'), local('Styrene-A-Web-Regular'),
-        url('/fonts/StyreneAWeb-Regular.woff2') format('woff2'),
-        url('/fonts/StyreneAWeb-Regular.woff') format('woff'),
-        url('/fonts/StyreneAWeb-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-  }
+  font-family: 'Quicksand';
+  src: url('/fonts/Quicksand-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
-.np-extension-html{
-    height: 100%;
-    border: 2px;
-    font-family: Styrene A Web Regular;
+/* General Styles */
+body {
+  font-family: 'Quicksand';
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container Styles */
+.np-extension-html {
+  height: 100%;
+  border: 2px solid #ccc;
 }
 
 .wrapper-np-extension {
-    width: 300px;
-    height: 125px;
-  }
-.col1-np-extension, .col2-np-extension{
-    display: inline-block;
-    width: 40%;
-    margin-top: 30px;
-}
-.np-extension-body{
-    padding: 0;
-    margin: 0;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ece2ff 100%);
-}
-.col1-np-extension:hover{
-    cursor: pointer;
-}
-.col2-np-extension:hover{
-    cursor: pointer;
-}
-.btn-np-extension:hover{
-    cursor: pointer;
-}
-.logo-np-extension{
-    height: 30px;
-    width: 92px;
-    
-    margin: auto;
-    margin-top: 10px;
-    
-}
-.section-np-extension{
-    margin: 0 auto;
-    text-align: center;
+  width: 300px;
+  height: 125px;
+  margin: 0 auto;
+  text-align: center;
 }
 
+/* Columns */
+.col1-np-extension, .col2-np-extension {
+  display: inline-block;
+  width: 45%;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Button Styles */
 .btn-np-extension {
-    background-color: #3800a2; 
-    border: none;
-    color: white;
-    padding: 7px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 13px;
-    border-radius: 10px;
-    margin-bottom: 10px;
-  }
-  
-  /* Tooltip text */
-.infotext {
-    display: none;
-    width: 120px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    padding: 5px 0;
-    border-radius: 6px;
-   
-    /* Position the tooltip text - see examples below! */
-    position: absolute;
-    z-index: 1;
-  }
-  
-  /* Show the tooltip text when you mouse over the tooltip container */
-  .tooltip:hover .tooltiptext {
-    visibility: visible;
-  }
-  .np-image-extension{
-    width: 65px;
-    height: 65px;
-  }
- 
+  background-color: #c4fdf3;
+  border: none;
+  color: #1b004e;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-family: 'Quicksand';
+  font-weight: bold;
+  transition: background-color 1s, transform 0.2s, color 0.7s;
+}
+
+.btn-np-extension:hover {
+  background-color: #1b004e;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Image Styles */
+.np-image-extension {
+  width: 65px;
+  height: 65px;
+  border-radius: 10px
+}
+.np-image-extension:hover {
+  cursor: pointer;
+}
+/* Header Logo */
+.logo-np-extension {
+  height: 30px;
+  width: 92px;
+  display: block;
+  margin: 10px auto;
+}
+
+/* Gradient Background */
+.np-extension-body {
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ece2ff 100%);
+  border-radius: 10px;
+}
