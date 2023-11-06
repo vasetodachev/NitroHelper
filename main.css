@@ -7,7 +7,7 @@
 }
 
 /* General Styles */
-body {
+.np-extension-body {
   font-family: 'Quicksand';
   background-color: #f9f9f9;
   margin: 0;
