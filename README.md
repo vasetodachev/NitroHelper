@@ -8,6 +8,7 @@ This extension provides two functionalities that will help with your everyday tr
 4. Check if page is Mobile Friendly, as you would do on https://search.google.com/test/mobile-friendly/
 5. Add random ?testnitro= parameter at the end of the URL. This way you can easily test if the new settings will resolve the issue without the need for clearing the old cache, which may also reflect with bigger issue on live page.
 6. Check if the page supports Rich Results. as you would do on https://search.google.com/test/rich-results/
+7. Check the Source Code of the page you are currently on.
 
 
 Installation guide can be found in:
